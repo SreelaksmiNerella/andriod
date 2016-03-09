@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         Button div;
         int i=0;
         TextView result;
-        List<Double> num;
+        Double[] num=new Double[2];
         double sum;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,57 +46,52 @@ public class MainActivity extends AppCompatActivity {
         first.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                num.add(i,Double.parseDouble(first.getText().toString()));
-                i++;
+                num[0]=Double.parseDouble(first.getText().toString());
+                //i++;
             }
         });
         second.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                num.add(i, Double.parseDouble(second.getText().toString()));
-                i++;
+                num[0]= Double.parseDouble(second.getText().toString());
+               // i++;
             }
         });
         three.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                num.add(i,Double.parseDouble(three.getText().toString()));
-                i++;
+                num[0]=Double.parseDouble(three.getText().toString());
+               // i++;
             }
         });
 
         add.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                int i=0;
-                sum=0;
-                for(i=0;i<num.size();i++)
-                {
-                    sum+=num.get(i);
-                }
+                sum+=num[0];
+                num[0]=0.0;
+                //i=0;
                 result.setText(Double.toString(sum));
             }
         });
         sub.setOnClickListener(new View.OnClickListener() {
 
+
             public void onClick(View v) {
-                int i=0;
-                sum=num.get(i);
-                for(i=1;i<num.size();i++)
-                {
-                    sum-=num.get(i);
-                }
+
+                    sum-=num[0];
+                    num[0]=0.0;
+
                 result.setText(Double.toString(sum));
             }
         });
         mul.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                int i = 0;
-                sum=1;
-                for (i = 0; i < num.size(); i++) {
-                    sum *= num.get(i);
-                }
+
+                    sum *= num[0];
+                    num[0]=0.0;
+
                 result.setText(Double.toString(sum));
             }
         });
@@ -104,11 +99,10 @@ public class MainActivity extends AppCompatActivity {
         div.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                int i = 0;
-                sum=num.get(i);
-                for (i = 1; i < num.size(); i++) {
-                    sum /= num.get(i);
-                }
+
+                    sum /= num[0];
+                num[0]=0.0;
+
                 result.setText(Double.toString(sum));
             }
         });

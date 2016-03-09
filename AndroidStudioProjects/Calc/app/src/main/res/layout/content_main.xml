@@ -36,7 +36,7 @@
         android:text="2"
         android:id="@+id/b2"
         android:layout_alignTop="@+id/b1"
-        android:layout_toStartOf="@+id/mul" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -59,31 +59,33 @@
         android:layout_height="wrap_content"
         android:text="-"
         android:id="@+id/minus"
-        android:layout_centerVertical="true"
-        android:layout_toStartOf="@+id/div" />
+        android:layout_marginBottom="71dp"
+        android:layout_above="@+id/mul"
+        android:layout_toStartOf="@+id/b2" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="*"
         android:id="@+id/mul"
-        android:layout_below="@+id/plus"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginBottom="91dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/b3" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="/"
         android:id="@+id/div"
-        android:layout_alignTop="@+id/mul"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="76dp" />
+        android:layout_below="@+id/plus"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="3"
         android:id="@+id/b3"
-        android:layout_alignTop="@+id/b2"
-        android:layout_toEndOf="@+id/minus" />
+        android:layout_marginEnd="70dp"
+        android:layout_below="@+id/b2"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
