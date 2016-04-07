@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.snerella.audio.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:focusableInTouchMode="false"
+    android:background="#d2f8e7af">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Record"
+        android:id="@+id/record"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:background="#d1a873" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        android:id="@+id/stop"
+        android:layout_alignTop="@+id/record"
+        android:layout_centerHorizontal="true"
+        android:background="#d1a873" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play"
+        android:id="@+id/play"
+        android:layout_alignTop="@+id/stop"
+        android:layout_toEndOf="@+id/stop"
+        android:layout_marginStart="40dp"
+        android:background="#d1a873" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_below="@+id/record"
+        android:layout_toStartOf="@+id/play"
+        android:layout_marginTop="54dp"
+        android:layout_alignEnd="@+id/play"
+        android:spinnerMode="dropdown"
+        android:background="#e29c9c" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/audio"
+        android:layout_marginTop="87dp"
+        android:hint="Enter A Title"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/stop"
+        android:background="#ddf7f3c8" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Display Title"
+        android:id="@+id/title"
+        android:layout_alignTop="@+id/audio"
+        android:layout_toEndOf="@+id/stop"
+        android:clickable="true"
+        android:background="#f5ce80" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:layout_alignStart="@+id/stop"
+        android:layout_toStartOf="@+id/play"
+        android:layout_alignBottom="@+id/title"
+        android:layout_alignTop="@+id/stop" />
+</RelativeLayout>
